@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Request Your Private Ayurveda Program</title>
+  <meta name="description" content="Send us your travel window and goals to receive a personalized Ayurveda program recommendation from our retreat team in Galle." />
+  <link rel="canonical" href="https://ayurvedainsrilanka.com/contact/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact | Request Your Private Ayurveda Program" />
+  <meta property="og:description" content="Request a private plan and receive a tailored recommendation within 24 hours." />
+  <meta property="og:url" content="https://ayurvedainsrilanka.com/contact/" />
+  <meta property="og:image" content="https://ayurvedainsrilanka.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="Ayurveda in Galle" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Ayurveda in Galle" />
+  <meta name="twitter:description" content="Send your goals and dates for a personalized Ayurveda proposal." />
+  <meta name="twitter:image" content="https://ayurvedainsrilanka.com/assets/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/ayurveda.css" />
+  <style>
+    .contact-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+    .form-card { border: 1px solid var(--line); border-radius: var(--radius-xl); background: #fff; box-shadow: var(--shadow-1); padding: 24px; }
+    .field { display: grid; gap: 7px; margin-bottom: 12px; }
+    label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--forest-2); }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      font: inherit;
+      background: #fff;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .muted { color: rgba(21,25,19,0.72); font-size: 14px; }
+    @media (max-width: 980px) { .contact-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <div class="container nav-row">
+      <a class="brand" href="/">
+        <span class="brand-main">Ayurveda in Galle</span>
+        <span class="brand-sub">Sri Lanka</span>
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav class="nav-links" data-nav aria-label="Main">
+        <a href="/programs/">Programs</a>
+        <a href="/individual-stays/">Individual Stays</a>
+        <a href="/approach/">Our Approach</a>
+        <a href="/retreat/">Retreat</a>
+        <a href="/contact/">Contact</a>
+        <a class="btn btn-primary" href="/contact/">Private Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" style="min-height:56vh;">
+      <img src="../assets/hero-poster-768.webp" alt="Consultation contact page" />
+      <div class="hero-content reveal" data-parallax="0.03">
+        <span class="eyebrow">Personal Program Inquiry</span>
+        <p class="breadcrumbs"><a href="/">Home</a> / Contact</p>
+        <h1>Tell us your goals. We build your stay accordingly.</h1>
+        <p>We usually reply within 24 hours with a recommended duration, treatment direction and exact pricing.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <article class="form-card reveal">
+          <h2 style="font-size:48px;color:var(--forest);">Request your personalized plan</h2>
+          <p class="muted">Share what matters most. The more specific you are, the better we can tailor your proposal.</p>
+          <form name="retreat-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="retreat-inquiry" />
+            <p hidden>
+              <label>Do not fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+            <div class="field">
+              <label for="duration">Preferred Duration</label>
+              <select id="duration" name="duration" required>
+                <option value="">Select...</option>
+                <option>3-4 nights (Discovery)</option>
+                <option>5 nights</option>
+                <option>7 nights</option>
+                <option>10 nights</option>
+                <option>14+ nights</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="goals">Main Health Goals</label>
+              <textarea id="goals" name="goals" placeholder="Stress, sleep, digestion, energy, hormonal balance, etc."></textarea>
+            </div>
+            <div class="field">
+              <label for="window">Travel Window</label>
+              <input id="window" name="window" placeholder="Example: August 2026" />
+            </div>
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          </form>
+        </article>
+
+        <article class="form-card reveal">
+          <h3 style="font-size:40px;color:var(--forest);">Alternative contact</h3>
+          <p class="muted">If you prefer direct conversation:</p>
+          <ul class="bullet-list">
+            <li>Email: <a href="mailto:info@ayurvedainsrilanka.com">info@ayurvedainsrilanka.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/94771346185" target="_blank" rel="noopener">+94 77 134 6185</a></li>
+            <li>Location: Wanchawala, Galle, Sri Lanka</li>
+            <li>Response time: usually within 24 hours</li>
+          </ul>
+          <p style="margin-top:18px;"><a class="btn btn-primary" href="https://wa.me/94771346185" target="_blank" rel="noopener">Start WhatsApp Chat</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Ayurveda in Galle · Wanchawala, Galle, Sri Lanka · +94 77 134 6185 · info@ayurvedainsrilanka.com
+    </div>
+  </footer>
+
+  <a class="btn btn-primary sticky-cta" href="/contact/">Consultation</a>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

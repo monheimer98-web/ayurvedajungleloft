@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thejungleloftgalle.com/sitemap.xml
+Sitemap: https://ayurvedainsrilanka.com/sitemap.xml
