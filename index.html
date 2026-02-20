@@ -1,183 +1,1265 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ayurveda in Galle | Tailored Luxury Retreats in Sri Lanka</title>
-  <meta name="description" content="Ayurveda in Galle offers personalized luxury Ayurveda stays in Sri Lanka with physician-led treatment plans, therapeutic cuisine and private retreat calm." />
+  <title>Ayurveda in Galle | The Jungle Loft Sri Lanka</title>
+  <meta name="description" content="Ayurveda in Galle at The Jungle Loft: personalized 3+ night Ayurveda stays, luxury rooms, therapeutic cuisine, physician-led programs and complete retreat planning in Sri Lanka." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://ayurvedainsrilanka.com/" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ayurveda in Galle | Tailored Luxury Retreats in Sri Lanka" />
-  <meta property="og:description" content="Personalized Ayurveda programs from 5, 7 and 10 nights. Individual stays possible from 3 nights." />
+  <meta property="og:title" content="Ayurveda in Galle | The Jungle Loft Sri Lanka" />
+  <meta property="og:description" content="A full-service luxury Ayurveda retreat concept at The Jungle Loft with tailored programs, rooms, food, therapies and private concierge." />
   <meta property="og:url" content="https://ayurvedainsrilanka.com/" />
   <meta property="og:image" content="https://ayurvedainsrilanka.com/assets/og-image.jpg" />
   <meta property="og:site_name" content="Ayurveda in Galle" />
   <meta property="og:locale" content="en_US" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ayurveda in Galle" />
-  <meta name="twitter:description" content="High-end Ayurveda retreats with personalized care in Galle, Sri Lanka." />
+  <meta name="twitter:title" content="Ayurveda in Galle | The Jungle Loft" />
+  <meta name="twitter:description" content="Personalized Ayurveda stays in Sri Lanka with luxury hospitality and medical depth." />
   <meta name="twitter:image" content="https://ayurvedainsrilanka.com/assets/og-image.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/ayurveda.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f8f4ec;
+      --ink: #131610;
+      --forest: #15392b;
+      --forest-2: #234d3c;
+      --gold: #b6915e;
+      --sand: #ece2d3;
+      --card: #fffefb;
+      --line: rgba(19, 22, 16, 0.12);
+      --line-light: rgba(255,255,255,0.3);
+      --shadow-1: 0 20px 42px rgba(14,18,13,0.13);
+      --shadow-2: 0 26px 50px rgba(14,18,13,0.24);
+      --max: 1220px;
+      --r-xl: 30px;
+      --r-lg: 20px;
+      --r-md: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      line-height: 1.66;
+      background:
+        radial-gradient(860px 460px at 100% -10%, rgba(182,145,94,.20), transparent 66%),
+        radial-gradient(760px 420px at -8% 28%, rgba(21,57,43,.10), transparent 62%),
+        var(--bg);
+    }
+
+    img, video { display: block; max-width: 100%; }
+    a { color: inherit; }
+
+    .container {
+      width: min(var(--max), calc(100% - 42px));
+      margin: 0 auto;
+    }
+
+    h1,h2,h3,h4 {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      line-height: 1.05;
+      letter-spacing: .01em;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      border-radius: 999px;
+      border: 1px solid var(--line-light);
+      background: rgba(0,0,0,.15);
+      color: #fff;
+      padding: 7px 13px;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: .13em;
+      margin-bottom: 16px;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      padding: 14px 0;
+      transition: background .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+    }
+
+    .site-header.is-solid {
+      background: rgba(248,244,236,.9);
+      box-shadow: 0 12px 24px rgba(13,17,12,.09);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 9px;
+      color: #fff;
+      transition: color .2s ease;
+    }
+
+    .site-header.is-solid .brand { color: var(--forest); }
+
+    .brand-main {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(30px, 3.6vw, 40px);
+      letter-spacing: .02em;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      opacity: .78;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 999px;
+      background: rgba(0,0,0,.15);
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      padding: 8px 14px;
+    }
+
+    .site-header.is-solid .nav-toggle {
+      color: var(--forest);
+      border-color: var(--line);
+      background: transparent;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      opacity: .9;
+      position: relative;
+      transition: opacity .2s ease;
+    }
+
+    .site-header.is-solid .nav a { color: var(--ink); }
+
+    .nav a:hover,
+    .nav a:focus-visible { opacity: 1; }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: 13px 22px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: -130%;
+      left: -90%;
+      width: 62%;
+      height: 260%;
+      transform: rotate(18deg);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.34), transparent);
+      transition: left .58s ease;
+      pointer-events: none;
+    }
+
+    .btn:hover::after,
+    .btn:focus-visible::after { left: 145%; }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(120deg, #174233, #255542 56%, #184838);
+      box-shadow: 0 16px 26px rgba(20,64,49,.3);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 21px 30px rgba(20,64,49,.35);
+    }
+
+    .btn-ghost {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.58);
+      background: rgba(255,255,255,.08);
+    }
+
+    .btn-dark {
+      color: #fff;
+      background: linear-gradient(120deg, #20261f, #32382f);
+      box-shadow: 0 12px 24px rgba(10,10,10,.2);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 98vh;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero video,
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero::before {
+      content: "";
+      z-index: 1;
+      background:
+        linear-gradient(120deg, rgba(9,12,10,.84), rgba(16,31,24,.54) 50%, rgba(28,59,46,.4) 100%),
+        radial-gradient(840px 420px at 85% 8%, rgba(182,145,94,.30), transparent 68%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(960px, calc(100% - 42px));
+      color: #fff;
+      margin: 0 auto;
+      padding: 130px 0 96px;
+    }
+
+    .hero h1 { font-size: clamp(48px, 8vw, 90px); }
+
+    .hero p {
+      margin: 18px 0 0;
+      max-width: 720px;
+      font-size: clamp(18px, 2.3vw, 22px);
+      color: rgba(255,255,255,.9);
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-metrics {
+      margin-top: 36px;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      max-width: 980px;
+    }
+
+    .hero-metrics .item {
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 14px;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(4px);
+      padding: 14px;
+    }
+
+    .hero-metrics strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .section { padding: clamp(78px, 8vw, 104px) 0; }
+    .section-alt {
+      background: linear-gradient(180deg, rgba(21,57,43,.04), rgba(182,145,94,.08));
+    }
+
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(38px, 5vw, 64px);
+      color: var(--forest);
+    }
+
+    .section-head p {
+      margin: 12px 0 0;
+      font-size: clamp(16px, 2.1vw, 19px);
+      color: rgba(19,22,16,.8);
+    }
+
+    .grid-2 { display: grid; gap: 20px; grid-template-columns: 1.05fr .95fr; }
+    .grid-3 { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid-4 { display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0,1fr)); }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--r-xl);
+      background: rgba(255,255,255,.84);
+      box-shadow: var(--shadow-1);
+      overflow: hidden;
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 44px rgba(14,18,13,.17);
+      border-color: rgba(182,145,94,.38);
+    }
+
+    .card-content { padding: clamp(22px, 3.6vw, 34px); }
+
+    .trust-strip {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
+    .trust-pill {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .program-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 16px 28px rgba(15,18,13,.1);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 10px;
+    }
+
+    .program-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -94px;
+      height: 170px;
+      background: radial-gradient(circle at center, rgba(182,145,94,.28), transparent 68%);
+      pointer-events: none;
+    }
+
+    .program-card h3 { font-size: clamp(30px, 3.6vw, 42px); color: var(--forest); }
+    .program-card p { margin: 0; }
+    .program-card ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; }
+
+    .program-card .tag {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      padding: 5px 11px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      background: #faf7f2;
+    }
+
+    .program-card .price {
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      color: var(--forest-2);
+    }
+
+    .program-card .cta-row {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .bullet-list li {
+      display: grid;
+      grid-template-columns: 12px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .bullet-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: 8px;
+      background: linear-gradient(140deg, var(--gold), #7a5a30);
+    }
+
+    .timeline { display: grid; gap: 11px; }
+
+    .timeline .step {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 12px;
+    }
+
+    .timeline .step strong {
+      color: var(--forest-2);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .room-card h3 {
+      font-size: 33px;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+
+    .room-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .room-card .card-content { padding: 18px; }
+
+    .room-actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .therapy-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
+    .therapy {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      font-size: 14px;
+      box-shadow: 0 10px 18px rgba(14,18,13,.07);
+    }
+
+    .gallery {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
+    .gallery a {
+      border-radius: 14px;
+      overflow: hidden;
+      display: block;
+      min-height: 170px;
+      position: relative;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 18px rgba(14,18,13,.08);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .gallery a:hover img { transform: scale(1.06); }
+
+    .testimonials {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
+    blockquote {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      padding: 22px;
+      box-shadow: 0 12px 20px rgba(14,18,13,.08);
+      font-size: 16px;
+    }
+
+    blockquote footer {
+      margin-top: 12px;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: .09em;
+      opacity: .72;
+    }
+
+    .faq { display: grid; gap: 10px; }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      padding: 14px 16px;
+    }
+
+    summary { cursor: pointer; font-weight: 700; }
+    details p { margin: 10px 0 0; }
+
+    .cta-band {
+      border-radius: 30px;
+      padding: clamp(28px, 4vw, 50px);
+      color: #fff;
+      background: linear-gradient(130deg, #153a2c, #25503f 56%, #b6915e 118%);
+      box-shadow: var(--shadow-2);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .cta-band h2 { font-size: clamp(34px, 5vw, 56px); }
+    .cta-band p { margin: 10px 0 0; max-width: 700px; color: rgba(255,255,255,.9); }
+
+    .booking-box {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 14px 24px rgba(14,18,13,.09);
+      overflow: hidden;
+    }
+
+    .booking-box iframe {
+      width: 100%;
+      min-height: 760px;
+      border: 0;
+      display: block;
+    }
+
+    .contact-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+
+    .form-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 12px 24px rgba(14,18,13,.08);
+      padding: 24px;
+    }
+
+    .field { display: grid; gap: 7px; margin-bottom: 12px; }
+
+    label {
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--forest-2);
+    }
+
+    input, textarea, select {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 11px 12px;
+      font: inherit;
+      background: #fff;
+      width: 100%;
+    }
+
+    textarea { min-height: 120px; resize: vertical; }
+
+    .footer {
+      margin-top: 36px;
+      border-top: 1px solid var(--line);
+      padding: 34px 0 44px;
+      font-size: 14px;
+      color: rgba(19,22,16,.74);
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .sticky-cta {
+      position: fixed;
+      right: 15px;
+      bottom: 15px;
+      z-index: 92;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .58s ease, transform .58s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(6,10,8,.86);
+      padding: 24px;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: min(1180px, 100%);
+      max-height: 84vh;
+      border-radius: 16px;
+      box-shadow: 0 26px 60px rgba(0,0,0,.45);
+    }
+
+    .lightbox button {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      border: 0;
+      border-radius: 999px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,.2);
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1140px) {
+      .grid-3,
+      .contact-grid,
+      .testimonials { grid-template-columns: 1fr; }
+      .grid-4,
+      .therapy-grid,
+      .gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .hero-metrics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .cta-band { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .nav-toggle { display: inline-flex; }
+      .nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        right: 20px;
+        width: min(92vw, 380px);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(248,244,236,.98);
+        box-shadow: var(--shadow-1);
+        padding: 12px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .nav.open { display: flex; }
+      .nav a { color: var(--ink); }
+      .hero h1 { font-size: clamp(42px, 10vw, 66px); }
+      .timeline .step { grid-template-columns: 1fr; }
+      .booking-box iframe { min-height: 680px; }
+      .sticky-cta { right: 12px; bottom: 12px; padding: 12px 16px; }
+    }
+
+    @media (max-width: 620px) {
+      .grid-2,
+      .grid-4,
+      .therapy-grid,
+      .gallery,
+      .hero-metrics { grid-template-columns: 1fr; }
+      .hero-content { padding-top: 120px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header" data-header>
+  <header class="site-header" id="siteHeader">
     <div class="container nav-row">
-      <a class="brand" href="/">
+      <a href="#top" class="brand">
         <span class="brand-main">Ayurveda in Galle</span>
         <span class="brand-sub">Sri Lanka</span>
       </a>
-      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Open navigation">Menu</button>
-      <nav class="nav-links" data-nav aria-label="Main">
-        <a href="/programs/">Programs</a>
-        <a href="/individual-stays/">Individual Stays</a>
-        <a href="/approach/">Our Approach</a>
-        <a href="/retreat/">Retreat</a>
-        <a href="/contact/">Contact</a>
-        <a class="btn btn-primary" href="/contact/">Private Consultation</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false">Menu</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="#programs">Programs</a>
+        <a href="#individual">Individual Care</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#dining">Dining</a>
+        <a href="#therapies">Therapies</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-primary">Consultation</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
+  <main id="top">
+    <section class="hero" aria-label="Hero">
       <video autoplay muted loop playsinline poster="assets/hero-poster.webp">
         <source src="assets/hero.mp4" type="video/mp4" />
       </video>
-      <div class="hero-content reveal" data-parallax="0.05">
-        <span class="eyebrow">Boutique Ayurvedic Destination</span>
-        <h1>Calm luxury. Clinical precision. Fully personalized healing stays.</h1>
+      <div class="hero-content reveal">
+        <span class="eyebrow">The Jungle Loft x Ayurveda in Sri Lanka</span>
+        <h1>Private luxury hospitality with fully personalized Ayurveda stays.</h1>
         <p>
-          We design each retreat around your constitution, health history and goals. Standard programs start at
-          5 nights. Individual stays are available from 3 nights.
+          Ayurveda in Galle is the dedicated wellness concept of The Jungle Loft. We combine the calm boutique jungle setting,
+          luxury rooms and high-touch service with individually tailored Ayurveda programs from 3 nights onward.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/programs/">Explore Programs</a>
-          <a class="btn btn-ghost" href="/contact/">Request Your Plan</a>
+          <a class="btn btn-primary" href="#programs">Explore Programs</a>
+          <a class="btn btn-ghost" href="https://wa.me/94771346185?text=Hi%20Ayurveda%20in%20Galle,%20I%20want%20a%20personalized%20program." target="_blank" rel="noopener">WhatsApp Concierge</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="item"><strong>3+ nights</strong>minimum for tailored stays</div>
+          <div class="item"><strong>5 / 7 / 10</strong>core program formats</div>
+          <div class="item"><strong>4 rooms</strong>boutique, private, calm</div>
+          <div class="item"><strong>24h</strong>proposal response time</div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container grid-3">
-        <article class="program-card reveal">
-          <span class="badge">Standard</span>
-          <h3>5 Nights</h3>
-          <p>Essential Reset for nervous-system recovery, sleep and digestion stabilization.</p>
-          <p class="price">From USD 2,250 pp</p>
-        </article>
-        <article class="program-card reveal">
-          <span class="badge">Most Chosen</span>
-          <h3>7 Nights</h3>
-          <p>Foundational Rebalance with stronger medical follow-up and deeper treatment progression.</p>
-          <p class="price">From USD 3,050 pp</p>
-        </article>
-        <article class="program-card reveal">
-          <span class="badge">Advanced</span>
-          <h3>10 Nights</h3>
-          <p>Deep Restore for sustained transformation in stress load, energy and metabolic balance.</p>
-          <p class="price">From USD 4,350 pp</p>
-        </article>
+      <div class="container trust-strip reveal">
+        <div class="trust-pill">Physician-Led Plans</div>
+        <div class="trust-pill">Luxury Boutique Stay</div>
+        <div class="trust-pill">Therapeutic Full Board</div>
+        <div class="trust-pill">Personal Concierge</div>
       </div>
     </section>
 
-    <section class="section section-soft">
+    <section class="section section-alt" id="concept">
       <div class="container grid-2">
         <article class="card reveal">
           <div class="card-content">
             <div class="section-head">
-              <h2>What makes this different</h2>
-              <p>Not a generic wellness package. Every detail is tailored and adjusted throughout your stay.</p>
+              <h2>What this concept stands for</h2>
+              <p>
+                This is not a generic spa package. It is an individual Ayurveda journey hosted at The Jungle Loft,
+                designed around your current health profile, your travel window and your recovery goals.
+              </p>
             </div>
             <ul class="bullet-list">
-              <li>Physician-led diagnosis and daily treatment adaptation</li>
-              <li>Dosha-specific meals, rhythm and therapy sequence</li>
-              <li>Small-scale environment for privacy and uninterrupted calm</li>
-              <li>Take-home integration protocol for post-retreat continuity</li>
+              <li>Medical-style intake and constitution-based planning at the beginning of each stay.</li>
+              <li>Treatment flow, meal rhythm and day structure adjusted while you are on site.</li>
+              <li>A calm luxury environment that supports nervous-system reset and deep rest.</li>
+              <li>A practical post-retreat continuation plan, not only a short holiday effect.</li>
             </ul>
           </div>
         </article>
         <article class="card reveal">
-          <img src="assets/place.jpg" alt="Private retreat atmosphere in Galle" loading="lazy" decoding="async" />
+          <img src="assets/place.jpg" alt="The Jungle Loft tropical retreat setting" loading="lazy" decoding="async" />
           <div class="card-content">
-            <h3 style="font-size:40px;color:var(--forest);">Designed for quiet, built for outcomes.</h3>
-            <p>From architecture to meal timing, everything supports regulation, recovery and personal focus.</p>
-            <p><a class="btn btn-primary" href="/retreat/">Discover Retreat Spaces</a></p>
+            <h3 style="font-size:42px;color:var(--forest);">The Jungle Loft identity remains at the core</h3>
+            <p>
+              You still experience the same character people love: intimate scale, warm team, tropical architecture,
+              exceptional food culture and quiet luxury near Galle.
+            </p>
+            <p><a class="btn btn-primary" href="#contact">Request Your Stay Design</a></p>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="programs">
       <div class="container">
         <div class="section-head reveal">
-          <h2>A cinematic look into the retreat</h2>
-          <p>Quiet architecture, tropical stillness and treatment-led hospitality in motion.</p>
+          <h2>Programs with real depth, not template wellness</h2>
+          <p>
+            We recommend one of these core structures to start. Every program is then personalized in therapies, nutrition,
+            intensity and rest windows.
+          </p>
         </div>
-        <div class="media-frame reveal">
-          <video autoplay muted loop playsinline controls poster="assets/hero-poster.webp">
-            <source src="assets/hero.mp4" type="video/mp4" />
-          </video>
+        <div class="grid-3">
+          <article class="program-card reveal">
+            <span class="tag">Essential Reset</span>
+            <h3>5 Nights</h3>
+            <p>Best for focused stress recovery and first therapeutic recalibration.</p>
+            <ul>
+              <li>Entry and exit consultations</li>
+              <li>2 daily treatment windows</li>
+              <li>Daily yoga, breath and restoration</li>
+              <li>Digestive and anti-inflammatory food rhythm</li>
+            </ul>
+            <p class="price">From USD 2,250 per person</p>
+            <div class="cta-row">
+              <a class="btn btn-dark" href="#contact" data-program="5 Nights Essential Reset">Plan This Program</a>
+            </div>
+          </article>
+
+          <article class="program-card reveal">
+            <span class="tag">Foundational Rebalance</span>
+            <h3>7 Nights</h3>
+            <p>Our strongest all-round option for measurable body and mind regulation.</p>
+            <ul>
+              <li>Structured progression with doctor checkpoints</li>
+              <li>Deeper treatment architecture</li>
+              <li>Meal plan adaptation by response</li>
+              <li>30-day continuation protocol</li>
+            </ul>
+            <p class="price">From USD 3,050 per person</p>
+            <div class="cta-row">
+              <a class="btn btn-dark" href="#contact" data-program="7 Nights Foundational Rebalance">Plan This Program</a>
+            </div>
+          </article>
+
+          <article class="program-card reveal">
+            <span class="tag">Deep Restore</span>
+            <h3>10 Nights</h3>
+            <p>For deeper patterns, longer reset and stronger integration support.</p>
+            <ul>
+              <li>2-3 therapeutic sessions daily as indicated</li>
+              <li>Phased treatment logic and adaptation</li>
+              <li>Calm high-touch retreat support</li>
+              <li>60-day reintegration blueprint</li>
+            </ul>
+            <p class="price">From USD 4,350 per person</p>
+            <div class="cta-row">
+              <a class="btn btn-dark" href="#contact" data-program="10 Nights Deep Restore">Plan This Program</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container callout reveal">
-        <h2>Individual stays from 3 nights</h2>
-        <p>
-          For guests with limited time, we offer short personalized Discovery Stays from 3 nights.
-          For deeper therapeutic goals, we usually recommend 7 nights or more.
-        </p>
-        <p><a class="btn btn-ghost" href="/individual-stays/">See How Individual Stays Work</a></p>
+    <section class="section section-alt" id="individual">
+      <div class="container grid-2">
+        <article class="card reveal">
+          <div class="card-content">
+            <div class="section-head">
+              <h2>Individual stays from 3 nights</h2>
+              <p>
+                If your timing or priorities are unique, we build your plan from scratch. This is central to our philosophy,
+                not an optional add-on.
+              </p>
+            </div>
+            <ul class="bullet-list">
+              <li>3-4 nights: Discovery/Recovery booster format.</li>
+              <li>6-9 nights: mixed travel + therapeutic sequence.</li>
+              <li>Couples: separate treatment tracks within shared stay logistics.</li>
+              <li>14/21 nights: only when clinically meaningful for your case.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-content">
+            <h3 style="font-size:42px;color:var(--forest);margin-bottom:14px;">How personal planning works</h3>
+            <div class="timeline">
+              <div class="step"><strong>Step 1</strong><div>Pre-arrival consultation to map goals, constraints and expected outcomes.</div></div>
+              <div class="step"><strong>Step 2</strong><div>On-site intake and first treatment logic definition.</div></div>
+              <div class="step"><strong>Step 3</strong><div>Daily adaptation in treatments, food and rhythm.</div></div>
+              <div class="step"><strong>Step 4</strong><div>Home plan with realistic integration after checkout.</div></div>
+            </div>
+            <p style="margin-top:14px;"><a class="btn btn-primary" href="#contact">Build My Individual Stay</a></p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section section-soft" id="faq">
+    <section class="section" id="rooms">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Rooms & villas at The Jungle Loft</h2>
+          <p>
+            Four unique units around the pool: private, design-led and intentionally quiet.
+            Your Ayurveda stay includes full boutique accommodation quality.
+          </p>
+        </div>
+        <div class="grid-4">
+          <article class="card room-card reveal">
+            <img src="assets/rooms/peacock/cover.jpg" alt="Peacock Villa" loading="lazy" decoding="async" />
+            <div class="card-content">
+              <h3>Peacock Villa</h3>
+              <p>Spacious villa with terrace, open-air bath and deep jungle atmosphere.</p>
+              <div class="room-actions">
+                <a class="btn btn-dark" href="#contact">Book This Room</a>
+              </div>
+            </div>
+          </article>
+          <article class="card room-card reveal">
+            <img src="assets/rooms/monkey/cover.jpg" alt="Monkey Villa" loading="lazy" decoding="async" />
+            <div class="card-content">
+              <h3>Monkey Villa</h3>
+              <p>Airy layout, private terrace and a calm semi-open bathroom experience.</p>
+              <div class="room-actions">
+                <a class="btn btn-dark" href="#contact">Book This Room</a>
+              </div>
+            </div>
+          </article>
+          <article class="card room-card reveal">
+            <img src="assets/rooms/mango/cover.jpg" alt="Mango Bungalow" loading="lazy" decoding="async" />
+            <div class="card-content">
+              <h3>Mango Bungalow</h3>
+              <p>Warm, cozy bungalow near the pool with private patio and natural textures.</p>
+              <div class="room-actions">
+                <a class="btn btn-dark" href="#contact">Book This Room</a>
+              </div>
+            </div>
+          </article>
+          <article class="card room-card reveal">
+            <img src="assets/rooms/lotus/cover.jpg" alt="Lotus Bungalow" loading="lazy" decoding="async" />
+            <div class="card-content">
+              <h3>Lotus Bungalow</h3>
+              <p>Private bungalow embraced by greenery, ideal for soft routines and deep rest.</p>
+              <div class="room-actions">
+                <a class="btn btn-dark" href="#contact">Book This Room</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="dining">
+      <div class="container grid-2">
+        <article class="card reveal">
+          <img src="assets/dining.jpg" alt="Ayurvedic cuisine at The Jungle Loft" loading="lazy" decoding="async" />
+          <div class="card-content">
+            <h3 style="font-size:44px;color:var(--forest);">Ayurvedic cuisine with Jungle Loft quality</h3>
+            <p>
+              Food is part of treatment. We serve dosha-aware, digestion-friendly menus with local ingredients,
+              prepared fresh and adjusted to your treatment phase.
+            </p>
+            <ul class="bullet-list">
+              <li>Therapeutic full-board and hydration rhythm</li>
+              <li>Anti-inflammatory cooking style, low-processing approach</li>
+              <li>Optional tasting experiences and chef-led explanations</li>
+              <li>Menu requests for sensitivities and allergies</li>
+            </ul>
+            <p style="margin-top:14px;"><a class="btn btn-primary" href="assets/rice-and-spice-menu.pdf" target="_blank" rel="noopener">View Sample Menu (PDF)</a></p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-content">
+            <h3 style="font-size:42px;color:var(--forest);margin-bottom:12px;">A complete retreat day flow</h3>
+            <div class="timeline">
+              <div class="step"><strong>06:30</strong><div>Herbal infusion, breathwork and gentle activation.</div></div>
+              <div class="step"><strong>07:30</strong><div>Yoga and mobility sequence for circulation and balance.</div></div>
+              <div class="step"><strong>09:00</strong><div>Therapeutic breakfast according to treatment stage.</div></div>
+              <div class="step"><strong>11:00</strong><div>Primary treatment session and rest integration.</div></div>
+              <div class="step"><strong>16:00</strong><div>Second treatment block and nervous-system downshift.</div></div>
+              <div class="step"><strong>20:00</strong><div>Light evening meal and sleep-supportive routine.</div></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="therapies">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Therapies and treatment modules</h2>
+          <p>
+            Modalities are selected based on your profile and response. Example toolkit:
+          </p>
+        </div>
+        <div class="therapy-grid">
+          <div class="therapy reveal"><strong>Abhyanga</strong><br />synchronized oil therapy for regulation and circulation.</div>
+          <div class="therapy reveal"><strong>Shirodhara</strong><br />calming oil-flow therapy for stress and sleep support.</div>
+          <div class="therapy reveal"><strong>Swedana</strong><br />herbal steam and heat modules for detox support.</div>
+          <div class="therapy reveal"><strong>Kati / Greeva Basti</strong><br />targeted local treatment for back/neck focus.</div>
+          <div class="therapy reveal"><strong>Podikizhi</strong><br />herbal bolus techniques for muscular release.</div>
+          <div class="therapy reveal"><strong>Nasya</strong><br />upper-channel cleansing according to indication.</div>
+          <div class="therapy reveal"><strong>Pranayama</strong><br />breath-led nervous-system modulation.</div>
+          <div class="therapy reveal"><strong>Guided Rest</strong><br />structured recovery windows to lock in treatment effect.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>What guests already value at The Jungle Loft</h2>
+          <p>
+            The service, calm and food quality are already proven. Ayurveda in Galle builds on that same foundation.
+          </p>
+        </div>
+        <div class="testimonials">
+          <blockquote class="reveal">
+            "A magical place in the heart of the jungle. The hospitality was outstanding and dinner was a highlight every evening."
+            <footer>Google Guest Review</footer>
+          </blockquote>
+          <blockquote class="reveal">
+            "One of the most beautiful stays we ever had. Calm, private and designed with real care for detail."
+            <footer>Airbnb Guest Review</footer>
+          </blockquote>
+          <blockquote class="reveal">
+            "Only four houses, so it feels very personal. Super clean, very warm team, peaceful atmosphere."
+            <footer>Airbnb Guest Review</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Retreat atmosphere gallery</h2>
+          <p>Luxury in detail: rooms, nature, cuisine and quiet moments throughout the property.</p>
+        </div>
+        <div class="gallery" id="galleryGrid">
+          <a href="#" data-full="assets/gallery/1.webp" class="reveal"><img src="assets/gallery/1.jpg" alt="Retreat landscape" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/2.webp" class="reveal"><img src="assets/gallery/2.jpg" alt="Pool and palms" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/3.webp" class="reveal"><img src="assets/gallery/3.jpg" alt="Veranda and plants" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/4.webp" class="reveal"><img src="assets/gallery/4.jpg" alt="Green door and terrace" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/5.webp" class="reveal"><img src="assets/gallery/5.jpg" alt="Coconuts by pool" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/6.webp" class="reveal"><img src="assets/gallery/6.jpg" alt="Pool at dusk" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/7.webp" class="reveal"><img src="assets/gallery/7.jpg" alt="Tropical wildlife" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/8.webp" class="reveal"><img src="assets/gallery/8.jpg" alt="Welcome drinks" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/9.webp" class="reveal"><img src="assets/gallery/9.jpg" alt="Nature around retreat" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/10.webp" class="reveal"><img src="assets/gallery/10.jpg" alt="Breakfast spread" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/11.webp" class="reveal"><img src="assets/gallery/11.jpg" alt="Property aerial view" loading="lazy" decoding="async" /></a>
+          <a href="#" data-full="assets/gallery/12.webp" class="reveal"><img src="assets/gallery/12.jpg" alt="Garden detail" loading="lazy" decoding="async" /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="faq">
       <div class="container">
         <div class="section-head reveal">
           <h2>Frequently asked questions</h2>
-          <p>Clear expectations before you book your stay.</p>
+          <p>Detailed answers before you commit to your retreat.</p>
         </div>
         <div class="faq reveal">
-          <details>
-            <summary>Is 3 nights enough for a meaningful program?</summary>
-            <p>Yes, for a short Discovery Reset. For deeper therapeutic outcomes we usually recommend 7 nights or longer.</p>
-          </details>
-          <details>
-            <summary>Can couples follow different treatment plans?</summary>
-            <p>Yes. Couples can stay together while receiving individually tailored therapies and meal adaptations.</p>
-          </details>
-          <details>
-            <summary>Do you offer 14 or 21-night stays?</summary>
-            <p>Yes, as optional extended formats for guests with complex or long-standing concerns, based on medical recommendation.</p>
-          </details>
-          <details>
-            <summary>How quickly do you respond to inquiries?</summary>
-            <p>Usually within 24 hours with a recommended stay length, treatment direction and pricing.</p>
-          </details>
+          <details><summary>Do you offer only fixed packages?</summary><p>No. We offer 5/7/10-night structures and fully individualized formats from 3 nights onward.</p></details>
+          <details><summary>Is 3 nights enough?</summary><p>For a short reset, yes. For deeper therapeutic goals, 7+ nights are generally more effective.</p></details>
+          <details><summary>Can couples have different treatment plans?</summary><p>Yes. You can stay together while receiving separate protocols and meal adaptations.</p></details>
+          <details><summary>Do you offer 14 or 21-night stays?</summary><p>Yes, as optional extended formats for specific cases where deeper progression is useful.</p></details>
+          <details><summary>What is included in the price?</summary><p>Accommodation, consultations, daily therapies, yoga/breath sessions, therapeutic full-board and support planning.</p></details>
+          <details><summary>Do you treat medical conditions?</summary><p>We provide wellness-oriented Ayurvedic support. For serious medical conditions, external physician coordination may be required.</p></details>
+          <details><summary>Do you provide airport transfers?</summary><p>Yes. Private transfer from Colombo Airport can be arranged as part of your proposal.</p></details>
+          <details><summary>Can I book just accommodation without Ayurveda?</summary><p>Yes, subject to availability. You can also combine regular stay days and Ayurveda days.</p></details>
+          <details><summary>Do you handle food allergies and intolerances?</summary><p>Yes. Please share details in advance so the kitchen can tailor your menus safely.</p></details>
+          <details><summary>Is there enough privacy on the property?</summary><p>Yes. The Jungle Loft has only four units and intentionally low-density hospitality.</p></details>
+          <details><summary>How fast do you reply to inquiries?</summary><p>Usually within 24 hours with a personalized recommendation and pricing.</p></details>
+          <details><summary>How do I secure my booking?</summary><p>Either via our direct booking engine or through a custom payment link after consultation.</p></details>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Request your private Ayurveda stay plan</h2>
+            <p>
+              Tell us your travel window, priorities and preferred duration. We send back a tailored concept with
+              recommended format, room options and exact pricing.
+            </p>
+          </div>
+          <div style="display:grid;gap:10px;min-width:240px;">
+            <a class="btn btn-ghost" href="https://wa.me/94771346185?text=Hi%20Ayurveda%20in%20Galle,%20please%20send%20me%20a%20private%20program%20proposal." target="_blank" rel="noopener">WhatsApp Now</a>
+            <a class="btn btn-ghost" href="mailto:info@ayurvedainsrilanka.com?subject=Private%20Ayurveda%20Program%20Request">Email Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container contact-grid">
+        <article class="form-card reveal">
+          <h3 style="font-size:42px;color:var(--forest);margin-bottom:8px;">Inquiry Form</h3>
+          <p style="margin-top:0;color:rgba(19,22,16,.75);">Structured details help us tailor your plan better.</p>
+          <form name="retreat-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="retreat-inquiry" />
+            <p hidden><label>Do not fill this out: <input name="bot-field" /></label></p>
+
+            <div class="field"><label for="name">Full Name</label><input id="name" name="name" required /></div>
+            <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required /></div>
+            <div class="field">
+              <label for="program">Preferred Program</label>
+              <select id="program" name="program">
+                <option value="">Select...</option>
+                <option>3-4 nights individual discovery</option>
+                <option>5 nights essential reset</option>
+                <option>7 nights foundational rebalance</option>
+                <option>10 nights deep restore</option>
+                <option>14+ nights extended</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field"><label for="window">Travel Window</label><input id="window" name="window" placeholder="Example: August 2026" /></div>
+            <div class="field"><label for="goals">Main Goals</label><textarea id="goals" name="goals" placeholder="Stress, sleep, digestion, fatigue, focus, etc."></textarea></div>
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          </form>
+        </article>
+
+        <article class="reveal">
+          <div class="section-head" style="margin-bottom:14px;">
+            <h2 style="font-size:44px;">Direct booking engine</h2>
+            <p>If you already know your dates, book directly here.</p>
+          </div>
+          <div class="booking-box">
+            <iframe src="https://book-directonline.com/properties/thejungleloftgalle" title="Direct booking engine"></iframe>
+          </div>
+          <p style="margin-top:10px;font-size:14px;color:rgba(19,22,16,.74);">
+            If the booking frame does not load, open directly:
+            <a href="https://book-directonline.com/properties/thejungleloftgalle" target="_blank" rel="noopener">booking page</a>.
+          </p>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      Ayurveda in Galle · Wanchawala, Galle, Sri Lanka · +94 77 134 6185 · info@ayurvedainsrilanka.com
+      <div class="footer-top">
+        <div>
+          <strong>Ayurveda in Galle</strong><br />
+          at The Jungle Loft, Wanchawala, Galle, Sri Lanka
+        </div>
+        <div>
+          WhatsApp: <a href="https://wa.me/94771346185" target="_blank" rel="noopener">+94 77 134 6185</a><br />
+          Email: <a href="mailto:info@ayurvedainsrilanka.com">info@ayurvedainsrilanka.com</a>
+        </div>
+      </div>
+      <div>
+        We design personalized Ayurveda stays with luxury boutique hospitality. This page is the official concept site for ayurvedainsrilanka.com.
+      </div>
     </div>
   </footer>
 
-  <a class="btn btn-primary sticky-cta" href="/contact/">Consultation</a>
+  <a class="btn btn-primary sticky-cta" href="#contact">Consultation</a>
 
-  <script src="assets/js/site.js"></script>
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+    <button type="button" id="lightboxClose" aria-label="Close">×</button>
+    <img id="lightboxImage" alt="Gallery image" />
+  </div>
+
+  <script>
+    const header = document.getElementById('siteHeader');
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    const setHeader = () => {
+      if (window.scrollY > 18) header.classList.add('is-solid');
+      else header.classList.remove('is-solid');
+    };
+
+    setHeader();
+    window.addEventListener('scroll', setHeader, { passive: true });
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        const open = mainNav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      mainNav.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => {
+          mainNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // prefill program in contact form
+    document.querySelectorAll('[data-program]').forEach((a) => {
+      a.addEventListener('click', () => {
+        const select = document.getElementById('program');
+        if (!select) return;
+        const val = a.getAttribute('data-program');
+        const option = Array.from(select.options).find(o => o.text.toLowerCase().includes(val.split(' ')[0].toLowerCase()));
+        if (option) select.value = option.text;
+      });
+    });
+
+    // lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('#galleryGrid a').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const full = a.getAttribute('data-full') || a.querySelector('img')?.src;
+        if (!full) return;
+        lightboxImg.src = full;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightboxClose?.addEventListener('click', () => lightbox.classList.remove('open'));
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) lightbox.classList.remove('open');
+    });
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "Ayurveda in Galle",
+    "@type": "LodgingBusiness",
+    "name": "Ayurveda in Galle at The Jungle Loft",
     "url": "https://ayurvedainsrilanka.com/",
+    "image": "https://ayurvedainsrilanka.com/assets/og-image.jpg",
+    "description": "Luxury boutique Ayurveda retreat concept at The Jungle Loft in Galle, Sri Lanka.",
     "telephone": "+94 77 134 6185",
     "email": "info@ayurvedainsrilanka.com",
     "address": {
@@ -187,43 +1269,17 @@
     }
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is 3 nights enough for a meaningful program?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, for a short Discovery Reset. For deeper therapeutic outcomes we usually recommend 7 nights or longer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can couples follow different treatment plans?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Couples can stay together while receiving individually tailored therapies and meal adaptations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer 14 or 21-night stays?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, as optional extended formats for guests with complex or long-standing concerns, based on medical recommendation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How quickly do you respond to inquiries?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually within 24 hours with a recommended stay length, treatment direction and pricing."
-        }
-      }
+      {"@type":"Question","name":"Do you offer only fixed packages?","acceptedAnswer":{"@type":"Answer","text":"No. We offer 5/7/10-night structures and fully individualized formats from 3 nights onward."}},
+      {"@type":"Question","name":"Is 3 nights enough?","acceptedAnswer":{"@type":"Answer","text":"For a short reset, yes. For deeper therapeutic goals, 7+ nights are generally more effective."}},
+      {"@type":"Question","name":"Can couples have different treatment plans?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can stay together while receiving separate protocols and meal adaptations."}},
+      {"@type":"Question","name":"Do you offer 14 or 21-night stays?","acceptedAnswer":{"@type":"Answer","text":"Yes, as optional extended formats for specific cases where deeper progression is useful."}},
+      {"@type":"Question","name":"How fast do you reply to inquiries?","acceptedAnswer":{"@type":"Answer","text":"Usually within 24 hours with a personalized recommendation and pricing."}}
     ]
   }
   </script>
