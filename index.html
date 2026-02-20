@@ -153,6 +153,11 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.3);
+      background: rgba(8,10,9,.22);
+      box-shadow: 0 10px 24px rgba(8,10,9,.2);
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: .08em;
@@ -163,10 +168,37 @@
       color: #fff;
       opacity: .9;
       position: relative;
+      font-weight: 700;
       transition: opacity .2s ease;
     }
 
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -7px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(182,145,94,.92), transparent);
+      opacity: 0;
+      transform: scaleX(.5);
+      transition: opacity .22s ease, transform .22s ease;
+    }
+
+    .nav a:hover::after,
+    .nav a:focus-visible::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    .site-header.is-solid .nav {
+      background: rgba(255,255,255,.9);
+      border-color: var(--line);
+      box-shadow: 0 8px 18px rgba(11,13,10,.08);
+    }
+
     .site-header.is-solid .nav a { color: var(--ink); }
+    .site-header.is-solid .nav .btn-primary { color: #fff; }
 
     .nav a:hover,
     .nav a:focus-visible { opacity: 1; }
@@ -211,6 +243,8 @@
       background: linear-gradient(120deg, #174233, #255542 56%, #184838);
       box-shadow: 0 16px 26px rgba(20,64,49,.3);
     }
+
+    .nav .btn-primary { color: #fff; }
 
     .btn-primary:hover,
     .btn-primary:focus-visible {
@@ -318,6 +352,16 @@
     .section-head h2 {
       font-size: clamp(38px, 5vw, 64px);
       color: var(--forest);
+    }
+
+    .section-head h2::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 2px;
+      margin-top: 12px;
+      background: linear-gradient(90deg, var(--gold), rgba(182,145,94,.2));
+      border-radius: 999px;
     }
 
     .section-head p {
@@ -442,16 +486,36 @@
       background: linear-gradient(140deg, var(--gold), #7a5a30);
     }
 
+    .feature-list li {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px 12px;
+      box-shadow: 0 8px 14px rgba(14,18,13,.05);
+    }
+
     .timeline { display: grid; gap: 11px; }
 
     .timeline .step {
       border: 1px solid var(--line);
       border-radius: 14px;
-      background: #fff;
+      background: linear-gradient(140deg, #fff, #f9f4eb);
       padding: 14px;
       display: grid;
       grid-template-columns: 92px 1fr;
       gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline .step::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--gold), rgba(182,145,94,.2));
     }
 
     .timeline .step strong {
@@ -459,6 +523,10 @@
       text-transform: uppercase;
       font-size: 12px;
       letter-spacing: .08em;
+    }
+
+    .timeline .step div {
+      color: rgba(19,22,16,.84);
     }
 
     .room-card h3 {
@@ -490,6 +558,35 @@
       padding: 14px;
       font-size: 14px;
       box-shadow: 0 10px 18px rgba(14,18,13,.07);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .therapy::after {
+      content: "";
+      position: absolute;
+      inset: auto -50px -80px;
+      height: 120px;
+      background: radial-gradient(circle at center, rgba(182,145,94,.2), transparent 70%);
+      pointer-events: none;
+    }
+
+    .therapy strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+
+    .therapy .meta {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--forest-2);
+      font-weight: 700;
     }
 
     .gallery {
@@ -790,17 +887,17 @@
         <article class="card reveal">
           <div class="card-content">
             <div class="section-head">
-              <h2>What this concept stands for</h2>
+              <h2>The Signature Healing Philosophy</h2>
               <p>
-                This is not a generic spa package. It is an individual Ayurveda journey hosted at The Jungle Loft,
-                designed around your current health profile, your travel window and your recovery goals.
+                Ayurveda in Galle is designed as an elevated, individualized retreat journey, not a pre-built package.
+                Every stay is shaped around your constitution, symptoms, travel rhythm and desired outcome.
               </p>
             </div>
-            <ul class="bullet-list">
-              <li>Medical-style intake and constitution-based planning at the beginning of each stay.</li>
-              <li>Treatment flow, meal rhythm and day structure adjusted while you are on site.</li>
-              <li>A calm luxury environment that supports nervous-system reset and deep rest.</li>
-              <li>A practical post-retreat continuation plan, not only a short holiday effect.</li>
+            <ul class="bullet-list feature-list">
+              <li>Personal Ayurvedic intake with a treatment architecture tailored to your baseline.</li>
+              <li>Daily adaptive care: therapies, food and pacing are refined continuously during your stay.</li>
+              <li>Luxury calm as part of treatment: architecture, privacy and rhythm support deep regulation.</li>
+              <li>Clear continuation strategy for home, so results remain measurable after departure.</li>
             </ul>
           </div>
         </article>
@@ -988,14 +1085,14 @@
         </article>
         <article class="card reveal">
           <div class="card-content">
-            <h3 style="font-size:42px;color:var(--forest);margin-bottom:12px;">A complete retreat day flow</h3>
+            <h3 style="font-size:42px;color:var(--forest);margin-bottom:12px;">The Signature Retreat Rhythm</h3>
             <div class="timeline">
-              <div class="step"><strong>06:30</strong><div>Herbal infusion, breathwork and gentle activation.</div></div>
-              <div class="step"><strong>07:30</strong><div>Yoga and mobility sequence for circulation and balance.</div></div>
-              <div class="step"><strong>09:00</strong><div>Therapeutic breakfast according to treatment stage.</div></div>
-              <div class="step"><strong>11:00</strong><div>Primary treatment session and rest integration.</div></div>
-              <div class="step"><strong>16:00</strong><div>Second treatment block and nervous-system downshift.</div></div>
-              <div class="step"><strong>20:00</strong><div>Light evening meal and sleep-supportive routine.</div></div>
+              <div class="step"><strong>06:30</strong><div>Herbal awakening ritual and guided breath sequence to stabilize the nervous system from the first hour.</div></div>
+              <div class="step"><strong>07:30</strong><div>Gentle yoga and mobility work tailored to your treatment phase and daily energy profile.</div></div>
+              <div class="step"><strong>09:00</strong><div>Therapeutic breakfast focused on digestion, steady energy and anti-inflammatory support.</div></div>
+              <div class="step"><strong>11:00</strong><div>Primary therapy block with physician-directed modalities and protected rest integration.</div></div>
+              <div class="step"><strong>16:00</strong><div>Second therapy block for deep release, circulation and parasympathetic down-regulation.</div></div>
+              <div class="step"><strong>20:00</strong><div>Light evening nourishment, reflection and sleep architecture for overnight recovery.</div></div>
             </div>
           </div>
         </article>
@@ -1005,20 +1102,20 @@
     <section class="section" id="therapies">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Therapies and treatment modules</h2>
+          <h2>Therapeutic craft, designed with precision</h2>
           <p>
-            Modalities are selected based on your profile and response. Example toolkit:
+            Every modality is selected for purpose, sequence and synergy. The stack below shows typical modules used in personalized plans:
           </p>
         </div>
         <div class="therapy-grid">
-          <div class="therapy reveal"><strong>Abhyanga</strong><br />synchronized oil therapy for regulation and circulation.</div>
-          <div class="therapy reveal"><strong>Shirodhara</strong><br />calming oil-flow therapy for stress and sleep support.</div>
-          <div class="therapy reveal"><strong>Swedana</strong><br />herbal steam and heat modules for detox support.</div>
-          <div class="therapy reveal"><strong>Kati / Greeva Basti</strong><br />targeted local treatment for back/neck focus.</div>
-          <div class="therapy reveal"><strong>Podikizhi</strong><br />herbal bolus techniques for muscular release.</div>
-          <div class="therapy reveal"><strong>Nasya</strong><br />upper-channel cleansing according to indication.</div>
-          <div class="therapy reveal"><strong>Pranayama</strong><br />breath-led nervous-system modulation.</div>
-          <div class="therapy reveal"><strong>Guided Rest</strong><br />structured recovery windows to lock in treatment effect.</div>
+          <div class="therapy reveal"><strong>Abhyanga</strong>Synchronised warm-oil work for circulation and systemic regulation.<span class="meta">Best for: stress load, stiffness</span></div>
+          <div class="therapy reveal"><strong>Shirodhara</strong>Continuous forehead oil-flow protocol for deep calming and sleep quality.<span class="meta">Best for: insomnia, overthinking</span></div>
+          <div class="therapy reveal"><strong>Swedana</strong>Herbal steam and heat modules to support detox and tissue softening.<span class="meta">Best for: cleansing support</span></div>
+          <div class="therapy reveal"><strong>Kati / Greeva Basti</strong>Localized oil retention for lumbar and cervical therapeutic focus.<span class="meta">Best for: neck/back tension</span></div>
+          <div class="therapy reveal"><strong>Podikizhi</strong>Herbal bolus treatment for deeper muscular release and circulation boost.<span class="meta">Best for: muscular heaviness</span></div>
+          <div class="therapy reveal"><strong>Nasya</strong>Targeted upper-channel cleansing under professional indication.<span class="meta">Best for: clarity and breath pathways</span></div>
+          <div class="therapy reveal"><strong>Pranayama</strong>Breath-led modulation for autonomic reset and mental steadiness.<span class="meta">Best for: resilience and focus</span></div>
+          <div class="therapy reveal"><strong>Guided Rest</strong>Structured integration windows to preserve treatment effect and recovery depth.<span class="meta">Best for: long-term results</span></div>
         </div>
       </div>
     </section>
